@@ -17,9 +17,23 @@
 
 # What is the value of the first triangle number to have over five hundred divisors?
 
-def problem12() -> int:
-    return 0
+# generate the next triangle number in a sequence
+def triangle():
+    n = 1
+    while True:
+        yield n * (n + 1) // 2
+        n += 1
 
+def problem12() -> int:
+    for n in triangle():
+        # count the number of divisors
+        divisors = 0
+        for i in range(1, int(n ** 0.5) + 1):
+            if n % i == 0:
+                divisors += 2
+        # if the number of divisors is greater than 500, return the number
+        if divisors > 500:
+            return n
 
 if __name__ == '__main__':
     print(problem12())
