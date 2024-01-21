@@ -13,7 +13,9 @@
 from datetime import date
 
 def problem19():
-    return sum(date(year, month, 1).weekday() == 6 for year in range(1901, 2001) for month in range(1, 13))
+    return sum(
+        date(year, month, 1).weekday() == 6 for year in range(1901, 2001) for month in range(1, 13)
+    )
 
 if __name__ == '__main__':
     print(problem19())
