@@ -1,3 +1,5 @@
+# https://projecteuler.net/problem=1
+
 # sum of multiples of a and b below limit
 # generalized solution for problem 1
 def sum_of_multiples(a, b, limit):

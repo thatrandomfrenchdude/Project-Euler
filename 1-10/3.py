@@ -1,5 +1,7 @@
 import math
 
+# # https://projecteuler.net/problem=3
+
 # largest value printed is solution
 def problem3():
     while n % 2 == 0:
